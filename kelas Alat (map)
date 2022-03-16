@@ -1,0 +1,14 @@
+package mencoba;
+
+class AlatM {
+    private String name;
+    private double harga ;
+    public AlatM(String name, double harga) {
+        this.name = name;
+        this.harga = harga;
+    }
+    @Override
+    public String toString() {
+        return "alatmusik " + name + ", harga: " + harga;
+    }
+}
