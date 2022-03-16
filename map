@@ -1,0 +1,30 @@
+package mencoba;
+
+    import java.util.HashMap;
+    import java.util.Map;
+
+public class map{
+
+    public static void main(String[] args) {
+
+        Map<String, AlatM> alat = new HashMap();
+        alat.put("key-1", new AlatM("drum", 1000000)); // method put() untuk menambahkan objek ke Map
+        alat.put("key-2", new AlatM("piano", 4000000));
+        alat.put("key-3", new AlatM("biola", 800000));
+        alat.put("key-4", new AlatM("gitar", 1200000));
+        alat.put("key-4", new AlatM("gitar-X", 1200000));
+
+        // method size() untuk mendapatkan ukuran Set
+        System.out.println("Map alat musik awal: (size = "+ alat.size() +")");
+        for (String key : alat.keySet()) { // looping key dari Map
+            System.out.println("\t " + key + " : " + alat.get(key));
+        }
+
+        alat.remove("key-2"); // method remove() untuk mengeluarkan objek dari Map
+
+        System.out.println("Map alat musik akhir: (size = "+ alat.size() +")");
+        for (AlatM alatmusik : alat.values()) { // looping value dari Map
+            System.out.println("\t " + alatmusik);
+        }
+    }
+}
