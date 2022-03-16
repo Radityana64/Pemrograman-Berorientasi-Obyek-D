@@ -1,0 +1,31 @@
+package mencoba;
+
+import java.util.*;
+
+public class set{
+
+    public static void main(String[] args) {
+
+        Set<String> alat = new HashSet<>();
+        alat.add("gitar"); // method add() untuk menambahkan objek ke Set
+        alat.add("biola");
+        alat.add("piano");
+        alat.add("biola");
+        alat.add("biola");
+        alat.add("drum");
+
+        // method size() untuk mendapatkan ukuran Set
+        System.out.println("Set alat musik awal: (size = " + alat.size() + ")");
+        for (String alatm : alat) {
+            System.out.println("\t " + alatm);
+        }
+
+        alat.remove("gitar"); // method remove() untuk mengeluarkan objek dari Set
+
+        System.out.println("Set alat musik akhir: (size = " + alat.size() + ")");
+        for (Iterator iterator = alat.iterator(); iterator.hasNext(); ) {
+            // looping menggunakan Iterator
+            System.out.println("\t " + iterator.next());
+        }
+    }
+}
